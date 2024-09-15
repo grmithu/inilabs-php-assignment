@@ -1,8 +1,19 @@
 <?php
-//Task 4: Polymorphism. using oop
+
+
+// Task 4: Polymorphism
+// Build a set of animal classes that demonstrate polymorphism by overriding a method for making sounds.
+
+
 class Animal {
     public function makeSound() {
         return "Some generic sound";
+    }
+}
+
+class Tiger extends Animal {
+    public function makeSound(){
+        return 'Growl!';
     }
 }
 
@@ -12,34 +23,29 @@ class Dog extends Animal {
     }
 }
 
+class Cow extends Animal {
+    public function makeSound() {
+        return "Moo!";
+    }
+}
+
 class Cat extends Animal {
     public function makeSound() {
         return "Meow!";
     }
 }
 
-class Cow extends Animal {
-    public function makeSound() {
-        return "Moo!";
-    }
-}
-class Tiger extends Animal {
-    public function makeSound(){
-        return 'Growl!';
-    }
-}
 
-// Example 
 $animals = [
-    new Dog(),
-    new Cat(),
     new Cow(),
-    new Tiger()
+    new Tiger(),
+    new Dog(),
+    new Cat()
 ];
 
 foreach ($animals as $animal) {
     echo get_class($animal) . " says: " . $animal->makeSound() . "<br>";
 }
 
-//Task 4 complete.
+
 ?>

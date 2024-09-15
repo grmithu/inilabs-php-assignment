@@ -1,5 +1,8 @@
 <?php
-//**Task 1: Class Inheritance** 
+
+// Task 1: Class Inheritance
+// Create classes to represent geometric shapes, including circles and rectangles. Implement methods for area calculation. You can use the provided example code as a reference.
+
 
 class Shape {
     public function area() {
@@ -28,18 +31,18 @@ class Rectangle extends Shape {
         $this->height = $height;
     }
 
-    public function area() {
+    public function area(): float|int {
         return $this->width * $this->height;
     }
 }
 
-// Example 
-$circle = new Circle(8);
+
+$circle = new Circle(7);
 echo "Circle Area: " . $circle->area() . "<br>";
 
-$rectangle = new Rectangle(5, 6);
+$rectangle = new Rectangle(4, 5);
 echo "Rectangle Area: " . $rectangle->area();
 
-//Task 1 Complete.
+
 
 ?>
